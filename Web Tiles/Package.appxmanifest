@@ -9,7 +9,7 @@
   <Identity
     Name="5078pepeizq.TilesforWebs"
     Publisher="CN=C91088FC-231C-4E13-86D1-5F9658173DA7"
-    Version="1.0.1.0" />
+    Version="1.0.2.0" />
 
   <mp:PhoneIdentity PhoneProductId="6e15eb96-99e4-4664-b502-24ec43abede0" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -32,19 +32,19 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="Web_Tiles.App">
       <uap:VisualElements
-        DisplayName="Tiles for Webs"
+        DisplayName="ms-resource:Webs_Title"
         Square150x150Logo="Assets\Logos\Square150x150Logo.png"
         Square44x44Logo="Assets\Logos\Square44x44Logo.png"
         Description="https://pepeizqapps.com/"
         BackgroundColor="#486a99">
-        <uap:DefaultTile Wide310x150Logo="Assets\Logos\Wide310x150Logo.png" ShortName="Tiles for Webs" Square71x71Logo="Assets\Logos\SmallTile.png" Square310x310Logo="Assets\Logos\LargeTile.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Logos\Wide310x150Logo.png" ShortName="Webs Tiles" Square71x71Logo="Assets\Logos\SmallTile.png" Square310x310Logo="Assets\Logos\LargeTile.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo"/>
             <uap:ShowOn Tile="wide310x150Logo"/>
             <uap:ShowOn Tile="square310x310Logo"/>
           </uap:ShowNameOnTiles>
         </uap:DefaultTile >
-        <uap:SplashScreen Image="Assets\Logos\SplashScreen.png"  BackgroundColor="#486a99"/>
+        <uap:SplashScreen Image="Assets\Logos\SplashScreen.png" a:Optional="true" xmlns:a="http://schemas.microsoft.com/appx/manifest/uap/windows10/5" BackgroundColor="#486a99"/>
         <uap:LockScreen BadgeLogo="Assets\Logos\BadgeLogo.png" Notification="badgeAndTileText"/>
       </uap:VisualElements>
     </Application>
