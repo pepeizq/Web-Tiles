@@ -34,7 +34,8 @@
         'Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "es-ES"
         'Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "en-US"
 
-        Cache.Cargar()
+        Configuracion.Cache.Cargar()
+        Configuracion.LimpiezaArchivos.Cargar()
         Interfaz.Webs.Cargar()
         Interfaz.AñadirTile.Cargar()
         MasTiles.Cargar()
@@ -42,8 +43,6 @@
 
         Dim recursos As New Resources.ResourceLoader
         Interfaz.Pestañas.Visibilidad(gridWebs, recursos.GetString("Webs"), Nothing)
-
-        ElementSoundPlayer.State = ElementSoundPlayerState.Off
 
     End Sub
 

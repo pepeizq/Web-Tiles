@@ -100,6 +100,17 @@ Namespace Interfaz
                     titulo = WebUtility.HtmlDecode(titulo)
                 End If
 
+                Dim id As String = enlace
+                id = id.Replace(".", Nothing)
+                id = id.Replace(":", Nothing)
+                id = id.Replace("/", Nothing)
+                id = id.Replace("\", Nothing)
+                id = id.Replace("-", Nothing)
+                id = id.Replace(">", Nothing)
+                id = id.Replace("<", Nothing)
+                id = id.Replace("?", Nothing)
+                id = id.Replace("|", Nothing)
+
                 Dim dominio As String = enlace
 
                 If enlace.IndexOf("/", 10) > -1 Then
@@ -121,18 +132,9 @@ Namespace Interfaz
                             icono = dominio + icono
                         End If
                     End If
-                End If
 
-                Dim id As String = enlace
-                id = id.Replace(".", Nothing)
-                id = id.Replace(":", Nothing)
-                id = id.Replace("/", Nothing)
-                id = id.Replace("\", Nothing)
-                id = id.Replace("-", Nothing)
-                id = id.Replace(">", Nothing)
-                id = id.Replace("<", Nothing)
-                id = id.Replace("?", Nothing)
-                id = id.Replace("|", Nothing)
+                    icono = Await Configuracion.Cache.DescargarImagen(icono, id, "icono")
+                End If
 
                 wv.Width = 930
                 wv.Height = 450
